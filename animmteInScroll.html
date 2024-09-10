@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animateScroll.css" >
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+   
+  <nav class="my_navbar">
+      
+    <input type="checkbox" name="" id="chk1" hidden> 
+     <div class="logo_text_container">
+       <div class="navbar_logo_imgs">
+         <a href="home.html" class="logo_link"><h2 class="logos">School.name</h2></a>
+       </div>
+       <div class="navbar_site_name">
+         <h6 class="sitename">#</h6>
+       </div>
+     </div>
+     <div class="menu_list_container">
+       <ul class="menu_list" type="none">
+         <li class="list_items active" ><a href="" class="list_item_name">HOME</a></li>
+         <li class="list_items"><a href="animmteInScroll.html" class="list_item_name">ACADAMICS</a></li>
+         <li class="list_items"><a href="" class="list_item_name">ENROLLMENT</a></li>
+         <li class="list_items"><a href="" class="list_item_name">ABOUT US</a></li>
+         <li class="list_items"><a href="" class="list_item_name">STAFF</a></li>
+       </ul>
+     </div>
+
+     <div class="search_sign_login_container">
+       <div class="search_bar_container">
+         <form action="" class="search">
+           <input class="srch_cont"  type="text" name="search" value="" placeholder="search"/>
+           <input class="srch_btn" type="button" name="submit" value="SS"/>
+         </form>
+       </div>
+       
+     </div>
+     
+   
+     <div class="menu" >
+       <label for="chk1" style="width: 50px; height: 50px;" >
+         <i> <img src="imges/Hamburger.png"  style="height: 40px; margin: 5px;"></i>
+       </label>
+     </div> 
+     
+   </nav>
+
+
+   <div class="carousal_body slideUp">
+    <div class="carousel-container_test">
+      <div class="carousel_test">
+        <!-- Clone the last slide to appear before the first slide -->
+        <div class="slide_test">
+           <div class="img">
+              <img src="imges/jay.jpg" alt="Slide 5">
+              <h4>jayanth</h4>
+              <p>hi hello</p>
+              <div class="profession">
+                <h5>- doctor</h5>
+              </div>
+           </div>
+        </div>
+  
+        <!-- Original slides -->
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/school 4.png" alt="Slide 5">
+            <h4>physiciann</h4>
+            <p>hello moto</p>
+            <div class="profession">
+              <h5>- Lawyer</h5>
+            </div>
+         </div>
+        </div>
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/school 2.png" alt="Slide 5">
+            <h4>jagan</h4>
+            <p>it is the best place</p>
+            <div class="profession">
+              <h5>- Former</h5>
+            </div>
+         </div>
+        </div>
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/school 6.png" alt="Slide 5">
+            <h4>bahubali</h4>
+            <p>here you are </p>
+            <div class="profession">
+              <h5>- Real-estate broker</h5>
+            </div>
+         </div>
+        </div>
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/school 9.png" alt="Slide 5">
+            <h4>donald trump</h4>
+            <p>great place to join our children</p>
+            <div class="profession">
+              <h5>- Electrician</h5>
+            </div>
+         </div>
+        </div>
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/jay.jpg" alt="Slide 5">
+            <h4>computer system</h4>
+            <p>best school in local</p>
+            <div class="profession">
+              <h5>- Builder</h5>
+            </div>
+         </div>
+        </div>
+  
+        <!-- Clone the first slide to appear after the last slide -->
+        <div class="slide_test">
+          <div class="img">
+            <img src="imges/school 13.png" alt="Slide 5">
+            <h4>java/oracle/c++</h4>
+            <p>school that is highly recomandable</p>
+            <div class="profession">
+              <h5>- Wedding Planner</h5>
+            </div>
+         </div>
+        </div>
+      </div>
+  
+  
+      <!-- Radio button Indicators -->
+      <div class="indicators_test">
+        <input type="radio" name="indicator" class="indicator_test" id="radio1">
+        <input type="radio" name="indicator" class="indicator_test" id="radio2">
+        <input type="radio" name="indicator" class="indicator_test" id="radio3">
+        <input type="radio" name="indicator" class="indicator_test" id="radio4">
+        <input type="radio" name="indicator" class="indicator_test" id="radio5">
+      </div>
+    </div>
+  </div> 
+
+
+   
+   
+ <script>
+
+  let currentSlide_t = 1;
+  const totalSlides_t = 5;
+  const carousel_t = document.querySelector('.carousel_test');
+ 
+  const indicators_t = document.querySelectorAll('.indicator_test');
+  
+  // Adjust slide width dynamically based on container width
+  function updateSlideWidth_test() {
+    const containerWidth = document.querySelector('.carousel-container_test').offsetWidth;
+    const slides = document.querySelectorAll('.slide_test');
+    slides.forEach(slide => {
+      slide.style.width = `${containerWidth}px`;
+    });
+    carousel_t.style.transform = `translateX(${-(currentSlide_t) * containerWidth}px)`;
+  }
+  
+  // Function to go to a specific slide
+  function goToSlide_test(slide) {
+    const containerWidth = 
+         document.querySelector('.carousel-container_test').offsetWidth;
+    currentSlide_t = slide;
+    carousel_t.style.transition = "transform 0.5s ease-in-out";
+    carousel_t.style.transform = 
+           `translateX(${-(currentSlide_t) * containerWidth}px)`;
+    updateIndicators_test();
+  }
+  
+  // Update the indicators
+  function updateIndicators_test() {
+    indicators_t.forEach((indicator, index) => {
+      if (currentSlide_t === totalSlides_t + 1) {
+        indicator.checked = index === 0; // If on the cloned first slide, set the first indicator
+      } else if (currentSlide_t === 0) {
+        indicator.checked = index === totalSlides_t - 1; // If on the cloned last slide, set the last indicator
+      } else {
+        indicator.checked = index === currentSlide_t - 1;
+      }
+    });
+  }
+  
+  // Auto-slide function
+  function autoSlide_test() {
+    const containerWidth = document.querySelector('.carousel-container_test').offsetWidth;
+    currentSlide_t++;
+    if (currentSlide_t > totalSlides_t) {
+      currentSlide_t = totalSlides_t + 1;
+      carousel_t.style.transition = "transform 0.5s ease-in-out";
+      carousel_t.style.transform = `translateX(${-(currentSlide_t) * containerWidth}px)`;
+      setTimeout(() => {
+        carousel_t.style.transition = "none";
+        currentSlide_t = 1;
+        carousel_t.style.transform = `translateX(-${containerWidth}px)`;
+        updateIndicators_test(); // Ensure indicators are updated after resetting to slide 1
+      }, 500);
+    } else {
+      goToSlide_test(currentSlide_t);
+    }
+  }
+  
+ 
+  // Auto-slide every 3 seconds
+  setInterval(autoSlide_test, 1000);
+  
+  // Start at slide 1 (after the cloned last slide)
+  window.addEventListener('resize', updateSlideWidth_test);
+  updateSlideWidth_test(); // Set initial width of the slides
+  carousel.style.transform = "translateX(-100%)";
+  
+ </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

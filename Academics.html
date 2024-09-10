@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics</title>
+
+    <link rel="stylesheet" href="css/academics.css">
+</head>
+<body>
+    <nav class="my_navbar">
+      
+        <input type="checkbox" name="" id="chk1" hidden> 
+         <div class="logo_text_container">
+           <div class="navbar_logo_imgs">
+             <a href="home.html" class="logo_link"><h2 class="logos">JAM DAM School</h2></a>
+           </div>
+           <div class="navbar_site_name">
+             <h6 class="sitename"></h6>
+           </div>
+         </div>
+         <div class="menu_list_container">
+           <ul class="menu_list" type="none">
+             <li class="list_items active" ><a href="home.html" class="list_item_name">HOME</a></li>
+             <li class="list_items"><a href="Academics.html" class="list_item_name active">ACADAMICS</a></li>
+             <li class="list_items"><a href="Enroll.html" class="list_item_name">ENROLLMENT</a></li>
+             <li class="list_items"><a href="About_Us.html" class="list_item_name">ABOUT US</a></li>
+             <li class="list_items"><a href="Staff.html" class="list_item_name">STAFF</a></li>
+           </ul>
+         </div>
+   
+         <div class="search_sign_login_container">
+           <div class="search_bar_container">
+             <form action="" class="search">
+               <input class="srch_cont"  type="text" name="search" value="" placeholder="search"/>
+               <button type="submit" class="srch_btn"></button>
+             </form>
+           </div>
+           
+         </div>
+         
+       
+         <div class="menu" >
+           <label for="chk1" style="width: 50px; height: 50px;" >
+             <i> <img src="imges/Hamburger.png"  style="height: 40px; margin: 5px;"></i>
+           </label>
+         </div> 
+         
+    </nav>
+
+    <div class="academics_welcome_image">
+      <h1>Academics</h1>
+      <div id="hrline" style="border:2px solid white;
+                  position: absolute;
+                  bottom: 90px;
+                  width: 20%;"></div>
+   </div>
+
+   
+   <div class="mid-banner-heading slideUp" style="position: relative; margin-top: 25px;">
+    <h2 style="text-align: center;
+            padding: 30px;"> 
+     Curriculum Overview
+  </h2>
+  <div  style="border: 2px solid black;
+                 width: 25%;
+                 margin-left: 37.5%; 
+                 position: absolute;
+                 bottom: 12px;
+                 outline: none;"></div>
+  </div>
+
+  <div class="academics_banner_and_matter">
+    <div class="reference_for_paragraph slideInRight">
+      <p class="slideInLeft">
+        At JAM DAM School, our curriculum is designed to provide a robust academic foundation while fostering creativity, critical thinking, and collaboration. We follow a dynamic curriculum aligned with national standards, ensuring that students acquire essential skills in literacy, numeracy, and problem-solving. In addition to core subjects like Mathematics, Science, Social Studies, and Languages, we offer specialized programs in art, music, and physical education. These diverse offerings ensure our students are well-rounded and ready for the challenges of the future.
+      </p>
+    
+      <div class="hrline "></div>
+    </div>
+
+  </div>
+
+   
+  <div class="mid-banner-heading slideUp" style="position: relative; margin-top: 25px;">
+    <h2 style="text-align: center;
+            padding: 30px;"> 
+    Classroom Environment
+  </h2>
+  <div  style="border: 2px solid black;
+                 width: 25%;
+                 margin-left: 37.5%; 
+                 position: absolute;
+                 bottom: 12px;
+                 outline: none;"></div>
+  </div>
+
+  <div class="classroom_banner_and_matter">
+    <div class="reference_for_paragraph slideInRight">
+      <p class="slideInLeft">
+        Our classrooms are centers of exploration and discovery, where students are encouraged to ask questions, experiment, and collaborate. Equipped with modern technology, including interactive whiteboards and projectors, our classrooms support diverse learning styles and facilitate a hands-on approach to learning. Teachers employ innovative teaching strategies such as group work, project-based learning, and inquiry-based education to engage students in meaningful ways.
+      </p>
+    
+      <div class="hrline "></div>
+    </div>
+
+  </div>
+
+
+
+   <div class="footer">
+    <a href="Academics.html"><p class="h3">Academics</p></a>
+    <div class="Vr_li"></div>
+    <a href="Enroll.html"><p class="h3">Enrollment</p></a>
+    <div class="Vr_li"></div>
+    <a href="About_Us.html"><p class="h3">About Us</p></a>
+    <div class="Vr_li"></div>
+    <a href="Staff.html"><p class="h3">Staff</p></a>
+    
+  </div>
+  <div class="all_rights_reserved">
+    <p>All rights reserved to JAM DAM School @2024</p>
+  </div>
+   
+
+         
+  <!-- animation for slideUp -->
+  <script>
+
+    // Get all zoom-box elements
+  const zooBoxes = document.querySelectorAll('.slideUp');
+  
+  // Create an IntersectionObserver to detect when elements are in the viewport
+  const observe = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+  // Add zoom-in class when the element is in the viewport
+  entry.target.classList.add('zoom-in');
+  } else {
+  // Remove zoom-in class when the element is out of the viewport
+  entry.target.classList.remove('zoom-in');
+  }
+  });
+  }, { threshold: 0.2 }); // Trigger when 50% of the element is visible
+  
+  // Observe each zoom-box
+  zooBoxes.forEach((box) => {
+  observe.observe(box);
+  });
+  
+  
+    </script>
+     
+  <!--  animation for SlideDown -->   
+  <script>
+  
+    // Get all zoom-box elements
+  const zooBoxeforZoomOut = document.querySelectorAll('.slideDown');
+  
+  // Create an IntersectionObserver to detect when elements are in the viewport
+  const observeforZMout = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+  // Add zoom-in class when the element is in the viewport
+  entry.target.classList.add('zoom-in');
+  } else {
+  // Remove zoom-in class when the element is out of the viewport
+  entry.target.classList.remove('zoom-in');
+  }
+  });
+  }, { threshold: 0.2 }); // Trigger when 50% of the element is visible
+  
+  // Observe each zoom-box
+  zooBoxeforZoomOut.forEach((box) => {
+    observeforZMout.observe(box);
+  });
+  
+  
+  </script>
+  <!--  animation for SlideInLeft-->
+  <script>
+  
+    // Get all zoom-box elements
+  const zooBoxforSlideleft = document.querySelectorAll('.slideInLeft');
+  
+  // Create an IntersectionObserver to detect when elements are in the viewport
+  const observeSlideleft = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+  // Add zoom-in class when the element is in the viewport
+  entry.target.classList.add('zoom-in');
+  } else {
+  // Remove zoom-in class when the element is out of the viewport
+  entry.target.classList.remove('zoom-in');
+  }
+  });
+  }, { threshold: 0.2 }); // Trigger when 50% of the element is visible
+  
+  // Observe each zoom-box
+  zooBoxforSlideleft.forEach((box) => {
+    observeSlideleft.observe(box);
+  });
+  
+  
+  </script>
+  <!--  animation for SlideRight-->
+  <script>
+  
+    // Get all zoom-box elements
+  const zooBoxeforSlideRight = document.querySelectorAll('.slideInRight');
+  
+  // Create an IntersectionObserver to detect when elements are in the viewport
+  const observeSlideRight = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+  // Add zoom-in class when the element is in the viewport
+  entry.target.classList.add('zoom-in');
+  } else {
+  // Remove zoom-in class when the element is out of the viewport
+  entry.target.classList.remove('zoom-in');
+  }
+  });
+  }, { threshold: 0.2 }); // Trigger when 50% of the element is visible
+  
+  // Observe each zoom-box
+  zooBoxeforSlideRight.forEach((box) => {
+    observeSlideRight.observe(box);
+  });
+  
+  
+  </script>
+</body>
+</html>
